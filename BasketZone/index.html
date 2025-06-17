@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BasketZone - Inicio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>BasketZone</h1>
+    <div class="auth-buttons">
+      <button id="btn-login">Iniciar Sesión</button>
+      <button id="btn-register">Registrarse</button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="carrito.html">Carrito</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  
+  <section class="banner">
+    <h2>¡Bienvenido a tu tienda de básquet favorita!</h2>
+    <p>Explora lo mejor en zapatillas, pelotas, ropa y más.</p>
+
+    <section class="carrusel">
+    <div class="carrusel-contenedor">
+      <button class="carrusel-btn prev">&#10094;</button>
+      <div class="slides-wrapper">
+        <div class="slide active">
+          <img src="https://via.placeholder.com/300x200?text=Jordan+Jumpman" alt="Jordan Jumpman" />
+        </div>
+        <div class="slide">
+          <img src="https://via.placeholder.com/300x200?text=Balon+Spalding" alt="Balón Spalding" />
+        </div>
+        <div class="slide">
+          <img src="https://via.placeholder.com/300x200?text=Camiseta+Lakers" alt="Camiseta Lakers" />
+        </div>
+      </div>
+      <button class="carrusel-btn next">&#10095;</button>
+    </div>
+  </section>
+
+  <script>
+    // Carrusel
+    const slides = document.querySelectorAll(".slide");
+    const prevBtn = document.querySelector(".carrusel-btn.prev");
+    const nextBtn = document.querySelector(".carrusel-btn.next");
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    }
+
+    prevBtn.addEventListener("click", () => {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    });
+
+    setInterval(() => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, 4000);
+
+    // Botones de auth
+    document.getElementById("btn-login").addEventListener("click", () => {
+      alert("Aquí va la funcionalidad para iniciar sesión.");
+    });
+
+    document.getElementById("btn-register").addEventListener("click", () => {
+      alert("Aquí va la funcionalidad para registrarse.");
+    });
+  </script>
+    <a href="productos.html" class="cta-button">Ver Productos</a>
+  </section>
+
+  
+</body>
+</html>

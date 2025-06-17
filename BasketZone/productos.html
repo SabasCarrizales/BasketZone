@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productos - BasketZone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Productos</h1>
+  </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="carrito.html">Carrito</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <section class="productos">
+    <div class="producto" data-id="1">
+      <img src="https://i.imgur.com/Z9bZg7Z.jpg" alt="Zapatillas Jordan" />
+      <h3>Jordan Jumpman</h3>
+      <p>$120</p>
+      <div class="contador">
+        <button onclick="cambiarCantidad(1, -1)">-</button>
+        <span id="cantidad-1">0</span>
+        <button onclick="cambiarCantidad(1, 1)">+</button>
+      </div>
+    </div>
+    <div class="producto" data-id="2">
+      <img src="https://i.imgur.com/Vx2kdxW.jpg" alt="Balón Spalding" />
+      <h3>Balón Spalding</h3>
+      <p>$35</p>
+      <div class="contador">
+        <button onclick="cambiarCantidad(2, -1)">-</button>
+        <span id="cantidad-2">0</span>
+        <button onclick="cambiarCantidad(2, 1)">+</button>
+      </div>
+    </div>
+    <div class="producto" data-id="3">
+      <img src="https://i.imgur.com/0D4LRoH.jpg" alt="Camiseta Lakers" />
+      <h3>Camiseta Lakers</h3>
+      <p>$60</p>
+      <div class="contador">
+        <button onclick="cambiarCantidad(3, -1)">-</button>
+        <span id="cantidad-3">0</span>
+        <button onclick="cambiarCantidad(3, 1)">+</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

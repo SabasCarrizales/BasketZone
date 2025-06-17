@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito - BasketZone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Carrito de Compras</h1>
+  </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="carrito.html">Carrito</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <section id="carrito-container">
+    <table id="carrito-tabla">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="carrito-body"></tbody>
+    </table>
+    <h3>Total: $<span id="total">0</span></h3>
+    <a href="factura.html" class="cta-button">Imprimir Factura</a>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
